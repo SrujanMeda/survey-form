@@ -1,0 +1,61 @@
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 14px 10px 6px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    appearance: none;
+}
+
+
+.input-group select {
+    color: transparent;
+}
+
+.input-group select:focus {
+    color: black;
+}
+
+.input-group select option {
+    color: black;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0 5px;
+    font-size: 16px;
+    color: gray;
+    transition: 0.3s ease-in-out;
+}
+.input-group .remarks {
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 100px 5px;
+    font-size: 16px;
+    color: gray;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label,
+.input-group select:focus + label,
+.input-group select.selected + label {
+    top: 10px;
+    left: 14px;
+    font-size: 12px;
+}

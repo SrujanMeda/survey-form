@@ -1,0 +1,103 @@
+body {
+    font-family: 'Lato', 'lucida grande', 'lucida sans unicode', Tahoma, Sans-Serif;
+}
+
+.main {
+  background-image: url(./Asserts/Images/photo-1673526759327-54f1f5b27322.jpg);
+  /* background-image: linear-gradient(1200deg, rgb(0, 0, 0) 70%, rgb(210, 101, 243)); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  overflow-y: scroll;
+  font-size: 24px
+}
+
+.main::after {
+    content: "";
+      background-color: rgb(0, 0, 0,.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  }
+
+  .main > h1,
+  .main > p {
+    text-align: center;
+    font-family: 35px;
+    z-index: 2;
+    position: relative
+  }
+  .main-content {
+    background-color: rgb(27, 27, 50, .9);
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      margin: 0 auto;
+    margin-bottom: 40px;
+      border-radius: 5px;
+      z-index: 2;
+      position: relative;
+        box-shadow: 0px -1px 10px 5px rgb(114, 9, 146);
+  }
+
+  #name, #email, #number, #remarks {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+#dropdown{
+  background-color: #ffffff;
+}
+label[for=name], 
+label[for=email],
+label[for=number],
+label[for=remarks] {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#UI, 
+#Features,
+#service,
+#simpleness,
+fieldset input {
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#remarks {
+    min-height: 180px;
+  }
+
+label[for=remarks]{
+    margin-top: 30px
+  }
+
+  #submit {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #37af65;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 0;
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  

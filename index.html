@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="floting-lable.css">
+    
+</head>
+<body>
+    <div class="main">
+        <h1>Survey Form</h1>
+        <p style="text-transform: capitalize;">Thank you for taking your time to give us FeedBack</p>
+        <div class="main-content">
+            <div class="form-content">
+                <form id="Survey-form">
+                    <!--Name Feild-->
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required placeholder=" " required>
+                        <label for="name" id="name-label">Name </label>
+                    </div>
+                    <!--Email Feild-->
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" " required>
+                        <label for="email" id="email-label">Email</label>
+                    </div>
+                    <!--Age Feild-->
+                    <div class="input-group">
+                        <input type="text" id="number" name="number" required placeholder=" " required>
+                        <label for="number" id="number-label">Age</label>
+                    </div>
+                    <!--Role Feild-->
+                    <div class="input-group">
+                        <select id="dropdown" name="dropdown" required onchange="this.classList.add('selected'); this.style.color='black';">
+                            <option value="" disabled selected hidden>Select an option</option>
+                            <option value="student">Student</option>
+                            <option value="job">Full Time Job</option>
+                            <option value="learner">Part Time Job</option>
+                            <option value="prefer">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="dropdown">Which option best describes your current role?</label>
+                    </div>
+                    <!--recommend Feild-->
+                    <fieldset>
+                        <legend>would you recommend our product to a friend?</legend>
+                        <input type="radio" name="recommend" value="Never" id="Never" checked><label for="Never">Never</label><br>
+                        <input type="radio" name="recommend" value="maybe" id="maybe"><label for="maybe">Maybe</label><br>
+                        <input type="radio" name="recommend" value="Likely" id="Likely"><label for="Likely">Likely</label><br>
+                        <input type="radio" name="recommend" value="definitely" id="definitely" ><label for="definitely">Definitely</label><br>
+                    </fieldset>
+                    <!--favorate Feild-->
+                    <p>Select things that you liked about our product</p>
+                    <input type="checkbox" name="UI" value="UI" id="UI"><label for="UI">UI</label><br>
+                    <input type="checkbox" name="Features" value="Features" id="Features"><label for="Features">Features</label><br>
+                    <input type="checkbox" name="service" value="service" id="service"><label for="service">service</label><br>
+                    <input type="checkbox" name="simpleness" value="simpleness" id="simpleness"><label for="simpleness">simpleness</label><br>
+                    <!--remarks Feild-->
+                    <div class="input-group">
+                        <textarea id="remarks" name="remarks" rows="5" cols="40" placeholder=" "></textarea>
+                        <label class="remarks" for="remarks">Remarks</label> 
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
