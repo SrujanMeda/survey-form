@@ -87,6 +87,8 @@ fieldset input {
 
   #dropdown {
     padding-top: 15px;
+    padding-bottom: 1px;
+    height: 40px;
   }
 /* label[for=remarks]{
     margin-top: 15px
