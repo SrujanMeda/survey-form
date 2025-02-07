@@ -39,9 +39,6 @@
     color: #589196;
     transition: 0.3s ease-in-out;
 }
-.input-group .remarks {
-    
-} 
 
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label,
