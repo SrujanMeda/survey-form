@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Label Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 14px 10px 6px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            background: none;
+            appearance: none;
+        }
+
+        .input-group select {
+            color: transparent;
+        }
+
+        .input-group select:focus {
+            color: black;
+        }
+
+        .input-group select option {
+            color: black;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            background: transparent;
+            padding: 0 5px;
+            font-size: 16px;
+            color: gray;
+            transition: 0.3s ease-in-out;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label,
+        .input-group select:focus + label,
+        .input-group select.selected + label {
+            top: 10px;
+            left: 14px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="#">
+            <div class="input-group">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email Address</label>
+            </div>
+            <div class="input-group">
+                <select id="role" required onchange="this.classList.add('selected'); this.style.color='black';">
+                    <option value="" disabled selected hidden>Choose an option</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="guest">Guest</option>
+                </select>
+                <label for="role">Role</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
