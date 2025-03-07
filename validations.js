@@ -5,6 +5,7 @@ function mouseOver() {
     const email = document.forms['suform']['email'].value;
     const role = document.forms['suform']['dropdown'].value;
     const emailcheck = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
     document.getElementById('submit').style.border = "2px solid #37af65";
 
     if (name == "" || !email.match(emailcheck) || role == "" && a == 0) {
@@ -32,6 +33,7 @@ function validateForm() {
     const email = document.forms['suform']['email'].value;
     const role = document.forms['suform']['dropdown'].value;
     const recommendation = document.forms['suform']['recommend'].value;
+    const age = document.forms['suform']['number'].value;
     const emailcheck = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
     let isValid = true;
@@ -62,6 +64,13 @@ function validateForm() {
         isValid = false;
     } else {
         document.getElementById('recommendationError').textContent = "";
+    }
+
+    if (age == "" || isNaN(age) || age < 0) {
+        document.getElementById('ageError').textContent = "Please enter a valid age.";
+        isValid = false;
+    } else {
+        document.getElementById('ageError').textContent = "";
     }
 
     if (!isValid) {
