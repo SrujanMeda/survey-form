@@ -25,49 +25,56 @@
         <p style="text-transform: capitalize;color: white;">Thank you for taking your time to give us FeedBack</p>
         <div class="main-content">
             <div class="form-content">
-                <form action="s.html" name="suform" id="Survey-form">
-                    <!--Name Feild-->
+                <form action="s.html" name="suform" id="Survey-form" onsubmit="return validateForm()">
+                    <!--Name Field-->
+                    <p id="nameError" class="error-message"></p>
                     <div class="input-group">
                         <input type="text" id="name" name="name"  placeholder=" " onclick="resetBtn()" maxlength="30">
-                        <label for="name" id="name-label">Name*</label>
+                        <label for="name" id="name-label">Name<span class="asterisk">*</span></label>
                     </div>
-                    <!--Email Feild-->
+                    <!--Email Field-->
+                    <p id="emailError" class="error-message"></p>
                     <div class="input-group">
-                        <input type="email" id="email" name="email" placeholder=" " onclick="resetBtn()" >
-                        <label for="email" id="email-label">Email*</label>
+                        <input type="email" id="email" name="email" placeholder=" " onclick="resetBtn()">
+                        <label for="email" id="email-label">Email<span class="asterisk">*</span></label>
                     </div>
-                    <!--Age Feild-->
+                    <!--Age Field-->
                     <div class="input-group">
                         <input type="text" id="number" name="number" placeholder=" ">
                         <label for="number" id="number-label">Age</label>
                     </div>
-                    <!--Role Feild-->
+                    <!--Role Field-->
+                    <p id="roleError" class="error-message"></p>
                     <div class="input-group">
                         <select id="dropdown" name="dropdown" onchange="this.classList.add('selected'); this.style.color='black';" onclick="resetBtn()">
-                            <option value="" disabled selected hidden>Select an option*</option>
+                            <option value="" disabled selected hidden>Select an option<span class="asterisk">*</span></option>
                             <option value="student">Student</option>
                             <option value="job">Full Time Job</option>
                             <option value="learner">Part Time Job</option>
                             <option value="prefer">Prefer not to say</option>
                             <option value="other">Other</option>
                         </select>
-                        <label for="dropdown">Which option best describes your current role?*</label>
+                        <label for="dropdown">Which option best describes your current role?<span class="asterisk">*</span></label>
+                        
                     </div>
-                    <!--recommend Feild-->
+                    <!--Recommendation Field-->
+                    <p id="recommendationError" class="error-message"></p>
                     <fieldset>
-                        <legend>would you recommend our product to a friend?*</legend>
+                        <legend>would you recommend our product to a friend?<span class="asterisk">*</span></legend>
                         <input type="radio" name="recommend" value="Never" id="Never"><label for="Never">Never</label><br>
                         <input type="radio" name="recommend" value="maybe" id="maybe"><label for="maybe">Maybe</label><br>
                         <input type="radio" name="recommend" value="Likely" id="Likely"><label for="Likely">Likely</label><br>
                         <input type="radio" name="recommend" value="definitely" id="definitely" ><label for="definitely">Definitely</label><br>
+                        
                     </fieldset>
-                    <!--favorate Feild-->
+                    
+                    <!--Favorite Field-->
                     <p>Select things that you liked about our product</p>
                     <input type="checkbox" name="UI" value="UI" id="UI"><label for="UI">UI</label><br>
                     <input type="checkbox" name="Features" value="Features" id="Features"><label for="Features">Features</label><br>
                     <input type="checkbox" name="service" value="service" id="service"><label for="service">service</label><br>
                     <input type="checkbox" name="simpleness" value="simpleness" id="simpleness"><label for="simpleness">simpleness</label><br>
-                    <!--remarks Feild-->
+                    <!--Remarks Field-->
                     <div class="input-group">
                         <textarea id="remarks" name="remarks" placeholder=" "></textarea>
                         <label class="remarks" for="remarks">Remarks</label> 
