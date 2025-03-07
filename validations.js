@@ -10,7 +10,7 @@ function mouseOver(){
         //change button color to red
         document.getElementById('submit').style.background = "url(./Asserts/Images/cracks.png)";
         document.getElementById('submit').style.backgroundSize = "cover";
-        document.getElementById('submit').style.boxShadow= "0px -1px 1px 1px rgb(136, 8, 8)";
+        document.getElementById('submit').style.boxShadow= "0px -1px 1px 3px rgb(136, 8, 8)";
         document.getElementById('submit').style.color = "transparent";
         a=1;
     }
