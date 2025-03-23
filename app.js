@@ -29,4 +29,9 @@ window.addEventListener("scroll", (event) => {
             tab.classList.remove('active');
         }
     })
-});  
+}); 
+
+function openYouTube() {
+    // Replace the URL below with your YouTube channel link
+    window.open('https://www.youtube.com/@truegameryt6969', '_blank');
+  }
